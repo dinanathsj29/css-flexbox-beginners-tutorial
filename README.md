@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="_images-css-flexbox/1-css3-logo-1.png" alt="CSS Flexbox " title="CSS Flexbox" width="200" />
+  <img src="_images-css-flexbox/1-css3-logo-1.png" alt="CSS Flexbox" title="CSS Flexbox" width="200" />
 </p>
 
 CSS Flexbox
@@ -57,6 +57,10 @@ Topics included/covered
     - 1.5. [Flexbox axis](#15-flexbox-axis)
     - 1.6. [Browser support](#16-browser-support)
 
+2. [Flex Container Properties](#2-flex-container-properties)
+    - 2.1. [Flex Display](#21-flex-display)
+    - 2.2. [Flex Direction](#22-flex-direction)
+
 1 Introduction to CSS Flexbox
 =====================
 
@@ -77,9 +81,9 @@ Topics included/covered
 
 Before CSS Flexbox there were 4 layout modes/models:
 1. **`Block`** (for different sections in a webpage)
-2. **`Inline`** (for text and spans in same line)
-3. **`Table`** (for two-dimensional tabular datad)
-4. **`Position`** (for explicit position of an element)
+2. **`Inline`** (for text and spans in the same line)
+3. **`Table`** (for two-dimensional tabular data)
+4. **`Position`** (for the explicit position of an element)
 
 ### Pre-Flexbox we have used:
 - Different positional properties like `fixed, absolute` to set alignment at the exact required place
@@ -276,6 +280,8 @@ Let's learn some of the Important Terminology/concepts related to CSS flexbox to
   </figure>
 </p>
 
+<hr/>
+
 <p>
   <figure>
     &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/1.5-flex-axis-2.png" alt="flex axis - main axis and cross axis" title="flex axis - main axis and cross axis" width="1000" border="2" />
@@ -283,9 +289,11 @@ Let's learn some of the Important Terminology/concepts related to CSS flexbox to
   </figure>
 </p>
 
+<hr/>
+
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/1.5-flex-axis-3-row-column.png" alt="flex axis - main axis and cross axis for Row and Column" title="flex axis - main axis and cross axis for Row and Column" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/1.5-flex-axis-3-row-column.png" alt="flex axis - main axis and cross axis for Row and Column" title="flex axis - main axis and cross axis for Row and Column" width="400" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - flex axis - main axis and cross axis for Row and Column </figcaption>
   </figure>
 </p>
@@ -299,5 +307,330 @@ The flexbox properties are supported in all modern browsers:
   <figure>
     &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/1.6-browser-support.png" alt="css flexbox browser support" title="css flexbox browser support" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - css flexbox browser support </figcaption>
+  </figure>
+</p>
+
+2 Flex Container Properties
+===================== 
+
+Let's look into some of the important properties used with Flex Container:
+- **`display`**
+  - It defines the Flex Container inline or block
+  - An important and mandatory property to work with Flexbox
+- **`flex-direction`**
+  - Defines direction for flex items to be placed inside Flex Container
+- **`flex-wrap`**
+  - Set Wrapping of items within Flex Container (overflow item placement)
+- **`flex-flow`**
+  - Short-hand property for a combination of flex-direction and flex-wrap
+- **`justify-content`**
+  - Defines alignment of items along the main axis
+- **`align-items`**
+  - How flex items layout/laid out with the cross axis
+- **`align-content`**
+  - Alignment of items along the cross axis (if multiple rows/lines available)
+
+
+2.1. Flex Display
+---------------------
+
+- To create a flex container, we set the value of the container's `display` property to `flex` or `inline-flex`
+- It enables a flex context for all its direct children
+
+`display` property creates either a `block-level` or `inline-level` flex container:
+- **`display: flex`**;
+  - block level flex, covers 100% width
+- **`display: inline-flex`**;
+  - inline-level, same line flex, covers only required width as per items width
+- syntax:
+```css 
+.container {
+  display: flex; /* block level flex container */
+  display: inline-flex; /* inline flex container */ 
+}
+```
+
+> **Syntax & Example**: `2.1-flex-display.html,  display: flex; /* block level flex container */`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.1-flex-display</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .main-container {
+        border: 4px solid #826a98;
+        display: flex; /* block level flex container */
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        background-color:#DDA0DD;
+      }
+
+      .item-2 {
+        background-color:#BF94E4;
+      }
+
+      .item-3 {
+        background-color:#734F96;
+      }
+
+      .item-4 {
+        background-color:#FBAED2;
+      }
+
+      .item-5 {
+        background-color:#EE82EE;
+      }
+      
+      .item-6 {
+        background-color:#ADE4CA;
+      }
+
+      .item-7 {
+        background-color:#A6D5AE;
+      }
+
+      .item-8 {
+        background-color:#8FBC8E;
+      }
+
+      .item-9 {
+        background-color: #64A466;
+      }
+      
+      .item-10 {
+        background-color:#2E8B56;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.1-flex-display-1-flex.png" alt="display: flex;" title="display: flex;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - display: flex; </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+> **Syntax & Example**: `2.1-flex-display.html,  display: inline-flex; /* inline flex container */`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+  /* display: flex; */ /* block level flex container */
+  display: inline-flex; /* inline flex container */ 
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.1-flex-display-2-inline-flex.png" alt="display: inline-flex;" title="display: inline-flex;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - display: inline-flex; </figcaption>
+  </figure>
+</p>
+
+2.2. Flex Direction
+---------------------
+
+- The flex-direction property decides/defines how flex items will stack inside flex container along the main axis, by default it's Main Axis runs from Left to Right
+- Flex items can be laid out in two main directions, like rows horizontally or like columns vertically
+
+`flex-direction` property sets the direction of the flex items along with the main axis:
+- **`flex-direction: row`**;
+  - Default direction is row-wise ie. left to right alignment
+  - With row direction, the flex items are stacked in a row from left-to-right
+- **`flex-direction: row-reverse`**;
+  - Right to left alignment (item alignment will start from right to left - item 1 will start from right)
+- **`flex-direction: column`**;
+  - The column value stacks the flex items vertically (from top to bottom)
+- **`flex-direction: column-reverse`**;
+  - bottom to top (item alignment will start from bottom to top - item 1 will start from the bottom)
+- syntax:
+```css 
+.container {
+  display: inline-flex;
+  
+  flex-direction: row;
+}
+```
+
+> **Syntax & Example**: `2.2-flex-direction.html, flex-direction: row;`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.2-flex-direction</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .main-container {
+        border: 4px solid #826a98;
+        /* display: flex; */ /* block level flex container */
+        display: inline-flex; /* inline flex container */
+        
+        /* flex-direction: row; */ /* left to right */
+        /* flex-direction: row-reverse; */ /* right to left */
+        /* flex-direction: column; */ /* top to bottom */
+        flex-direction: column-reverse; /* bottom to top */
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        background-color:#DDA0DD;
+      }
+
+      .item-2 {
+        background-color:#BF94E4;
+      }
+
+      .item-3 {
+        background-color:#734F96;
+      }
+
+      .item-4 {
+        background-color:#FBAED2;
+      }
+
+      .item-5 {
+        background-color:#EE82EE;
+      }
+      
+      .item-6 {
+        background-color:#ADE4CA;
+      }
+
+      .item-7 {
+        background-color:#A6D5AE;
+      }
+
+      .item-8 {
+        background-color:#8FBC8E;
+      }
+
+      .item-9 {
+        background-color: #64A466;
+      }
+      
+      .item-10 {
+        background-color:#2E8B56;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.2-flex-direction-1-row.png" alt="flex-direction: row;" title="flex-direction: row;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-direction: row; </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+<p>
+  <figure>
+  &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.2-flex-direction-2-row-reverse.png" alt="flex-direction: row-reverse;" title="flex-direction: row-reverse;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-direction: row-reverse; </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.2-flex-direction-3-column.png" alt="flex-direction: column;" title="flex-direction: column;" height="500" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-direction: column; </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.2-flex-direction-4-column-reverse.png" alt="flex-direction: column-reverse;" title="flex-direction: column-reverse;" height="500" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-direction: column-reverse; </figcaption>
   </figure>
 </p>
