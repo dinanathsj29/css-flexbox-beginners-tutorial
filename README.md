@@ -68,17 +68,23 @@ Topics included/covered
 - Distribute space among items
 - Control alignments of objects/elements/items in given container
 - Flexbox layout is most appropriate to the components of an application, and small-scale layouts
+- Flexbox is a new CSS display type designed to craft CSS layouts in a much easier way
+- Control the position, size, and spacing of child elements relative to parent container and other child elements
 - W3C Candidate Recommendation as of October 2017
 
 1.2. Layout modes
 ---------------------
 
 Before CSS Flexbox there were 4 layout modes/models:
-1. **Block** (for different sections in a webpage)
-2. **Inline** (for text and spans in same line)
-3. **Table** (for two-dimensional tabular data)
-4. **Position** (for explicit position of an element)
+1. **`Block`** (for different sections in a webpage)
+2. **`Inline`** (for text and spans in same line)
+3. **`Table`** (for two-dimensional tabular datad)
+4. **`Position`** (for explicit position of an element)
 
+### Pre-Flexbox we have used:
+- Different positional properties like `fixed, absolute` to set alignment at the exact required place
+- Floats and clear fixes to create navigation, detailed section
+- Fixed heights columns to show equality
 - Above mentioned layout modes does not provide enough flexibility to create/build or design professional/nested/modern layouts
 - we need to include another CSS mechanism like Floats, Vertical alignment of text/elements and other hacks with Margin, Padding to create the accurate/desired layout
 - CSS Flexible Box Layout Module (Flexbox), makes it easier to design flexible responsive layout structure without using float or positioning
@@ -91,17 +97,21 @@ Before CSS Flexbox there were 4 layout modes/models:
   - adjust the spacing between objects
   - alignments of items
   - order and placements of various elements 
-  - improve the items align, directions and order in the container even when they are with dynamic or even unknown size
+  - improve the items alignment, directions and order in the container even when they are with dynamic or even unknown size
+  - equal height columns
   - ability to modify the width or height of its children to fill the available space in the best possible way on different screen sizes
+  - Flexbox is a new CSS display type designed to craft CSS layouts in a much easier way
+  - Control the position, size, and spacing of child elements relative to parent container and other child elements
+  - CSS flexbox works great responsively (RWD - Responsive Web Design)
   - Bootstrap 4 is built-on with Flex layout Model
 
 1.4. Important Terminology
 ---------------------
 
 Let's learn some of the Important Terminology/concepts related to CSS flexbox to get proper understandings and how it works. There are main three terms or entities while dealing with flexbox:
-1. **Flex Container** (Parent/Container to hold sub-items)
-2. **Flex Items** (Child/sub-items)
-3. **Flexbox axis** (Main axis [horizontal] and Cross axis [vertical])
+1. **`Flex Container`** (Parent/Container to hold sub-items)
+2. **`Flex Items`** (Child/sub-items)
+3. **`Flexbox axis`** (Main axis [horizontal] and Cross axis [vertical])
 
 > **Syntax & Example**: `1.4-flex-container-item.html basic markup`
 
@@ -261,11 +271,24 @@ Let's learn some of the Important Terminology/concepts related to CSS flexbox to
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/1.5-flex-axis-1 ??? .png" alt="flex axis - main axis and cross axis" title="flex axis - main axis and cross axis" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/1.5-flex-axis-1.png" alt="flex axis - main axis and cross axis" title="flex axis - main axis and cross axis" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - flex axis - main axis and cross axis </figcaption>
   </figure>
 </p>
 
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/1.5-flex-axis-2.png" alt="flex axis - main axis and cross axis" title="flex axis - main axis and cross axis" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex axis - main axis and cross axis </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/1.5-flex-axis-3-row-column.png" alt="flex axis - main axis and cross axis for Row and Column" title="flex axis - main axis and cross axis for Row and Column" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex axis - main axis and cross axis for Row and Column </figcaption>
+  </figure>
+</p>
 
 1.6. Browser support
 ---------------------
