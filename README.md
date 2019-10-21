@@ -60,6 +60,7 @@ Topics included/covered
 2. [Flex Container Properties](#2-flex-container-properties)
     - 2.1. [Flex Display](#21-flex-display)
     - 2.2. [Flex Direction](#22-flex-direction)
+    - 2.3. [Flex Wrap](#23-flex-wrap)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -320,7 +321,7 @@ Let's look into some of the important properties used with Flex Container:
 - **`flex-direction`**
   - Defines direction for flex items to be placed inside Flex Container
 - **`flex-wrap`**
-  - Set Wrapping of items within Flex Container (overflow item placement)
+  - Set wrapping of items within Flex Container (overflow item placement)
 - **`flex-flow`**
   - Short-hand property for a combination of flex-direction and flex-wrap
 - **`justify-content`**
@@ -498,7 +499,7 @@ Let's look into some of the important properties used with Flex Container:
 }
 ```
 
-> **Syntax & Example**: `2.2-flex-direction.html, flex-direction: row;`
+> **Syntax & Example**: `2.2-flex-direction.html, flex-direction: row; /* left to right */`
 
 ```html
 <!DOCTYPE html>
@@ -632,5 +633,88 @@ Let's look into some of the important properties used with Flex Container:
   <figure>
     &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.2-flex-direction-4-column-reverse.png" alt="flex-direction: column-reverse;" title="flex-direction: column-reverse;" height="500" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-direction: column-reverse; </figcaption>
+  </figure>
+</p>
+
+2.3. Flex Wrap
+---------------------
+
+By default all items in Flex Container try to fit themself in a container in one row/column. If enough space not available, items simply overflow - with the help of `flex-wrap` property we can set the overflow direction 
+
+- The `flex-wrap` property specifies whether the flex items should wrap or not
+- The `flex-wrap` property simply determines how items are wrapped when parent container runs out of space
+
+`flex-wrap` property controls the wrapping of flex items within the container:
+- **`flex-wrap: nowrap;`** (default is row nowrap)
+- **`flex-wrap: wrap;`** (wraps overflow items to bottom/next row or right/next column)
+- **`flex-wrap: wrap-reverse;`** (wraps overflow items to top row or left column)
+- syntax:
+```css
+.container {
+  display: inline-flex;
+  
+  flex-wrap: wrap;
+}
+```
+
+### 2.3.1. Row wise flex-wrap
+
+> **Syntax & Example**: `2.3.1-flex-wrap-row.html flex-wrap: wrap; /* wraps overflow items to bottom/next row */`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+  display: flex; /* block level flex container */
+
+  /* flex-wrap: nowrap; */ /* default is row nowrap */
+  /* flex-wrap: wrap; */ /* wraps overflow items to bottom/next row */
+  flex-wrap: wrap-reverse; /* wraps overflow items to top row */
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.3.1.1-flex-wrap-row.png" alt="flex-wrap: wrap;" title="flex-wrap: wrap" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - row flex-wrap: wrap; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.3.1.2-flex-wrap-row-reverse.png" alt="flex-wrap: wrap-reverse;" title="flex-wrap: wrap-reverse;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - row flex-wrap: wrap-reverse; </figcaption>
+ </figure>
+</p>
+
+<hr/>
+
+### 2.3.2. Columner/Column wise flex-wrap
+
+> **Syntax & Example**: `2.3.2-flex-wrap-column.html flex-wrap: wrap; /* wraps overflow items to right/next column */`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+  display: flex; /* block level flex container */
+
+  height: 300px;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */ /* default is nowrap */
+  /* flex-wrap: wrap; */ /* wraps overflow items to right/next column */
+  flex-wrap: wrap-reverse; /* wraps overflow items to left column */
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.3.2.1-flex-wrap-column.png" alt="flex-wrap: wrap" title="flex-wrap: wrap" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - column flex-wrap: wrap; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.3.2.2-flex-wrap-column-reverse.png" alt="flex-wrap: wrap-reverse" title="flex-wrap: wrap-reverse" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - column flex-wrap: wrap-reverse; </figcaption>
   </figure>
 </p>
