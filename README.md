@@ -62,6 +62,7 @@ Topics included/covered
     - 2.2. [Flex Direction](#22-flex-direction)
     - 2.3. [Flex Wrap](#23-flex-wrap)
     - 2.4. [Flex Flow](#24-flex-flow)
+    - 2.5. [Justify Content](#25-justify-content)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -726,7 +727,7 @@ By default, all items in Flex Container try to fit themselves in a container in 
 - `flex-flow` property is shorthand for `flex-direction` and `flex-wrap` properties
 - By default `flex-flow` property is set to `row` and `nowrap` which is default value of properties like `flex-direction` and `flex-wrap`
 - syntax:
-```css ???
+```css
 .container {
   /* flex-flow: <flex-direction> && <flex-wrap> */
   flex-flow: row wrap;
@@ -817,4 +818,160 @@ By default, all items in Flex Container try to fit themselves in a container in 
     &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.4.2.3-flex-flow-column-reverse-wrap-reverse.png" alt="flex-flow: column-reverse wrap-reverse;" title="flex-flow: column-reverse wrap-reverse;" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-flow: column-reverse wrap-reverse; </figcaption>
  </figure>
+</p>
+
+2.5. Justify Content
+---------------------
+
+- `justify-content` defines and set the alignment of flex items along with the main axis
+- It helps distribute extra free space leftover when either all the flex items on a line
+- The default value of `justify-content` is `flex-start` which simply means start all flex items from left side exactly the place where the container starts (`justify-content: flex-start;`)
+- syntax:
+```css
+.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right
+}
+```
+
+`justify-content` property is used to align the flex items within the container along with the main axis:
+- **`justify-content: flex-start;`**
+  - Default alignment for items, start from/packed toward the left side of the container
+  - The `flex-start` value aligns the flex items at the beginning of the container (this is the default)
+- **`justify-content: flex-end;`**
+  - Align item to right or end of the container main axis
+- **`justify-content: center`**
+  - Align item at the center of the main container 
+  - `center` value aligns the flex items at the center of the container
+- **`justify-content: space-between`**
+  - Equally, distribute the items [(apart from first-start and last-end item) in between items will be distributed with equal gap/space ]
+- **`justify-content: space-around`**
+  - `space-around` property displays the flex items with space before, between, and after the lines
+  - [( first-start and last-end items have 50% space/gap) in between items will be distributed with 100% gap/space ]
+  - [space to the edges will be 50% ] and spacing between any two items are 100%
+- **`justify-content: space-evenly`**
+  - All flex item is distributed with even/equal space-gap
+  - All flex items are distributed evenly/equally so that the spacing between any two items (and the space to the edges) is also equal
+
+### 2.5.1. Row wise justify-content
+
+> **Syntax & Example**: `2.5.1-flex-justify-content-row.html`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+  display: flex; /* block level flex container */
+  
+  /*  justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  justify-content: space-evenly;
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.1-flex-justify-content-row-flex-start.png" alt="justify-content: flex-start" title="justify-content: flex-start" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-start </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.2-flex-justify-content-row-flex-end.png" alt="justify-content: flex-end" title="justify-content: flex-end" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-end </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.3-flex-justify-content-row-center.png" alt="justify-content: center" title="justify-content: center" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: center </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.4-flex-justify-content-row-space-between.png" alt="justify-content: space-between" title="justify-content: space-between" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-between </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.5-flex-justify-content-row-space-around.png" alt="justify-content: space-around" title="justify-content: space-around" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-around </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.6-flex-justify-content-row-space-evenly.png" alt="justify-content: space-evenly" title="justify-content: space-evenly" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-evenly </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+### 2.5.2. Columner/Column wise justify-content
+
+> **Syntax & Example**: `2.5.2-flex-justify-content-column.html`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+  display: flex; /* block level flex container */
+  
+  flex-direction: column;
+  height: 600px;
+  /* justify-content: flex-start; */
+  /* justify-content: flex-end; */
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* justify-content: space-around; */
+  justify-content: space-evenly;
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.1-flex-justify-content-column-flex-start.png" alt="justify-content: flex-start" title="justify-content: flex-start" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-start </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.2-flex-justify-content-column-flex-end.png" alt="justify-content: flex-end" title="justify-content: flex-end" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-end </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.3-flex-justify-content-column-center.png" alt="justify-content: center" title="justify-content: center" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: center </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.4-flex-justify-content-column-space-between.png" alt="justify-content: space-between" title="justify-content: space-between" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-between </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.5-flex-justify-content-column-space-around.png" alt="justify-content: space-around" title="justify-content: space-around" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-around </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.6-flex-justify-content-column-space-evenly.png" alt="justify-content: space-evenly" title="justify-content: space-evenly" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-evenly </figcaption>
+  </figure>
 </p>
