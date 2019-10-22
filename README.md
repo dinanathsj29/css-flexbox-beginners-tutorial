@@ -61,6 +61,7 @@ Topics included/covered
     - 2.1. [Flex Display](#21-flex-display)
     - 2.2. [Flex Direction](#22-flex-direction)
     - 2.3. [Flex Wrap](#23-flex-wrap)
+    - 2.4. [Flex Flow](#24-flex-flow)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -639,10 +640,10 @@ Let's look into some of the important properties used with Flex Container:
 2.3. Flex Wrap
 ---------------------
 
-By default all items in Flex Container try to fit themself in a container in one row/column. If enough space not available, items simply overflow - with the help of `flex-wrap` property we can set the overflow direction 
+By default, all items in Flex Container try to fit themselves in a container in one row/column. If enough space not available, items simply overflow - with the help of `flex-wrap` property we can set the overflow direction 
 
 - The `flex-wrap` property specifies whether the flex items should wrap or not
-- The `flex-wrap` property simply determines how items are wrapped when parent container runs out of space
+- The `flex-wrap` property simply determines how items are wrapped when the parent container runs out of space
 
 `flex-wrap` property controls the wrapping of flex items within the container:
 - **`flex-wrap: nowrap;`** (default is row nowrap)
@@ -717,4 +718,103 @@ By default all items in Flex Container try to fit themself in a container in one
     &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.3.2.2-flex-wrap-column-reverse.png" alt="flex-wrap: wrap-reverse" title="flex-wrap: wrap-reverse" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - column flex-wrap: wrap-reverse; </figcaption>
   </figure>
+</p>
+
+2.4. Flex Flow
+---------------------
+
+- `flex-flow` property is shorthand for `flex-direction` and `flex-wrap` properties
+- By default `flex-flow` property is set to `row` and `nowrap` which is default value of properties like `flex-direction` and `flex-wrap`
+- syntax:
+```css ???
+.container {
+  /* flex-flow: <flex-direction> && <flex-wrap> */
+  flex-flow: row wrap;
+}
+```
+
+### 2.4.1. Row wise - flex-flow: row wrap
+
+> **Syntax & Example**: `2.4.1-flex-flow-row.html`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+  display: flex; /* block level flex container */
+  
+  /* basic or normal way for row wrap */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+
+  /* latest way to write and use flex-flow, instead of flex-direction and flex-wrap */
+  /* flex-flow: row wrap; */
+  /* flex-flow: row wrap-reverse; */
+  flex-flow: row-reverse wrap-reverse;
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.4.1.1-flex-flow-row-wrap.png" alt="flex-flow: row wrap;" title="flex-flow: row wrap;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-flow: row wrap; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.4.1.2-flex-flow-row-reverse-wrap.png" alt="flex-flow: row-reverse wrap;" title="flex-flow: row-reverse wrap;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-flow: row-reverse wrap; </figcaption>
+ </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.4.1.3-flex-flow-row-reverse-wrap-reverse.png" alt="flex-flow: row-reverse wrap-reverse;" title="flex-flow: row-reverse wrap-reverse;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-flow: row-reverse wrap-reverse; </figcaption>
+ </figure>
+</p>
+
+<hr/>
+
+### 2.4.2. Column wise - flex-flow: column wrap
+
+> **Syntax & Example**: `2.4.2-flex-flow-column.html`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+  display: flex; /* block level flex container */
+  
+  /* basic or normal way for row wrap */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* height: 300px; */
+
+  /* latest way to write and use flex-flow, instead of flex-direction and flex-wrap */
+  height: 300px;
+  flex-flow: column wrap;
+  /* flex-flow: column-reverse wrap; */
+  /* flex-flow: column-reverse wrap-reverse; */
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.4.2.1-flex-flow-column-wrap.png" alt="flex-flow: column wrap;" title="flex-flow: column wrap;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-flow: column wrap; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.4.2.2-flex-flow-column-reverse-wrap.png" alt="flex-flow: column-reverse wrap;" title="flex-flow: column-reverse wrap;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-flow: column-reverse wrap; </figcaption>
+ </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.4.2.3-flex-flow-column-reverse-wrap-reverse.png" alt="flex-flow: column-reverse wrap-reverse;" title="flex-flow: column-reverse wrap-reverse;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-flow: column-reverse wrap-reverse; </figcaption>
+ </figure>
 </p>
