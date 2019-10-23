@@ -63,6 +63,7 @@ Topics included/covered
     - 2.3. [Flex Wrap](#23-flex-wrap)
     - 2.4. [Flex Flow](#24-flex-flow)
     - 2.5. [Justify Content](#25-justify-content)
+    - 2.6. [Align Items](#26-align-items)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -348,8 +349,10 @@ Let's look into some of the important properties used with Flex Container:
 - syntax:
 ```css 
 .container {
-  display: flex; /* block level flex container */
-  display: inline-flex; /* inline flex container */ 
+  /* display: flex; */ /* block level flex container */
+  /* display: inline-flex; */ /* inline flex container */
+
+  display : flex | inline-flex; 
 }
 ```
 
@@ -497,7 +500,7 @@ Let's look into some of the important properties used with Flex Container:
 .container {
   display: inline-flex;
   
-  flex-direction: row;
+  flex-direction: row | row-reverse | column | column-reverse;
 }
 ```
 
@@ -655,7 +658,7 @@ By default, all items in Flex Container try to fit themselves in a container in 
 .container {
   display: inline-flex;
   
-  flex-wrap: wrap;
+  flex-wrap: nowrap | wrap | wrap-reverse;
 }
 ```
 
@@ -872,43 +875,43 @@ By default, all items in Flex Container try to fit themselves in a container in 
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.1-flex-justify-content-row-flex-start.png" alt="justify-content: flex-start" title="justify-content: flex-start" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-start </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.1-flex-justify-content-row-flex-start.png" alt="justify-content: flex-start;" title="justify-content: flex-start;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-start; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.2-flex-justify-content-row-flex-end.png" alt="justify-content: flex-end" title="justify-content: flex-end" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-end </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.2-flex-justify-content-row-flex-end.png" alt="justify-content: flex-end;" title="justify-content: flex-end;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-end; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.3-flex-justify-content-row-center.png" alt="justify-content: center" title="justify-content: center" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: center </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.3-flex-justify-content-row-center.png" alt="justify-content: center;" title="justify-content: center;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: center; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.4-flex-justify-content-row-space-between.png" alt="justify-content: space-between" title="justify-content: space-between" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-between </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.4-flex-justify-content-row-space-between.png" alt="justify-content: space-between;" title="justify-content: space-between;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-between; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.5-flex-justify-content-row-space-around.png" alt="justify-content: space-around" title="justify-content: space-around" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-around </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.5-flex-justify-content-row-space-around.png" alt="justify-content: space-around;" title="justify-content: space-around;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-around; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.6-flex-justify-content-row-space-evenly.png" alt="justify-content: space-evenly" title="justify-content: space-evenly" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-evenly </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.1.6-flex-justify-content-row-space-evenly.png" alt="justify-content: space-evenly;" title="justify-content: space-evenly;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-evenly; </figcaption>
   </figure>
 </p>
 
@@ -936,42 +939,362 @@ By default, all items in Flex Container try to fit themselves in a container in 
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.1-flex-justify-content-column-flex-start.png" alt="justify-content: flex-start" title="justify-content: flex-start" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-start </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.1-flex-justify-content-column-flex-start.png" alt="justify-content: flex-start;" title="justify-content: flex-start;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-start; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.2-flex-justify-content-column-flex-end.png" alt="justify-content: flex-end" title="justify-content: flex-end" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-end </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.2-flex-justify-content-column-flex-end.png" alt="justify-content: flex-end;" title="justify-content: flex-end;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: flex-end; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.3-flex-justify-content-column-center.png" alt="justify-content: center" title="justify-content: center" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: center </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.3-flex-justify-content-column-center.png" alt="justify-content: center;" title="justify-content: center;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: center; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.4-flex-justify-content-column-space-between.png" alt="justify-content: space-between" title="justify-content: space-between" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-between </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.4-flex-justify-content-column-space-between.png" alt="justify-content: space-between;" title="justify-content: space-between;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-between; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.5-flex-justify-content-column-space-around.png" alt="justify-content: space-around" title="justify-content: space-around" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-around </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.5-flex-justify-content-column-space-around.png" alt="justify-content: space-around;" title="justify-content: space-around;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-around; </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.6-flex-justify-content-column-space-evenly.png" alt="justify-content: space-evenly" title="justify-content: space-evenly" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-evenly </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.5.2.6-flex-justify-content-column-space-evenly.png" alt="justify-content: space-evenly;" title="justify-content: space-evenly;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - justify-content: space-evenly; </figcaption>
+  </figure>
+</p>
+
+2.6. Align Items
+---------------------
+
+- `align-items` property defines default behavior of flex items, it simply means how flex items align along the cross axis (vertically) of the container
+- `align-items` is similar to justify-content but works in a perpendicular direction to the main-axis
+- syntax:
+```css
+.container {
+  align-items: stretch | flex-start | flex-end | center | baseline 
+}
+```
+
+The `align-items` property will align the items on the cross axis:
+- **`align-item: stretch;`**
+  - Default alignment for flex-items, covers/occupy 100% height of container
+- **`align-item: flex-start;`**
+  - All flex items squeezed/stacked or align at start ie. from the top of the container (items line up at the start of the flex container)
+- **`align-item: flex-end;`**
+  - All flex items start/stacked from bottom or aligned/pushed at the bottom
+- **`align-item: center;`**
+  - Align item vertically center/middle of the container (items are stacked to the center/middle of the container)
+- **`align-item: baseline;`**
+  - The baseline is the line upon which most of the letter set (Flex items are aligned in a way that their baselines are aligned)
+
+### 2.6.1. Row wise align-item
+
+> **Syntax & Example**: `2.6.1-flex-align-item-row.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.6.1-flex-align-item-row</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .main-container {
+        border: 4px solid #826a98;
+        
+        display: flex; /* block level flex container */
+        height: 600px;
+
+        align-items: stretch;  /* default value for algn-iitems is stretch */
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        /* align-items: baseline; */
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        background-color:#DDA0DD;
+        padding-bottom: 2rem;
+      }
+
+      .item-2 {
+        background-color:#BF94E4;
+        padding-bottom: 3rem;
+      }
+
+      .item-3 {
+        background-color:#734F96;
+        font-size: 3rem;
+      }
+
+      .item-4 {
+        background-color:#FBAED2;
+      }
+
+      .item-5 {
+        background-color:#EE82EE;
+      }
+      
+      .item-6 {
+        background-color:#ADE4CA;
+      }
+
+      .item-7 {
+        background-color:#A6D5AE;
+      }
+
+      .item-8 {
+        background-color:#8FBC8E;
+      }
+
+      .item-9 {
+        background-color: #64A466;
+      }
+      
+      .item-10 {
+        background-color:#2E8B56;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.1.1-flex-align-item-row-stretch.png" alt="align-items: stretch;" title="align-items: stretch;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: stretch; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.1.2-flex-align-item-row-flex-start.png" alt="align-items: flex-start;" title="align-items: flex-start;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: flex-start; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.1.3-flex-align-item-row-flex-end.png" alt="align-items: flex-end;" title="align-items: flex-end;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: flex-end; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.1.4-flex-align-item-row-center.png" alt="align-items: center;" title="align-items: center;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: center; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.1.5-flex-align-item-row-baseline.png" alt="align-items: baseline;" title="align-items: baseline;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: baseline; </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+### 2.6.2. Columner/Column wise align-item
+
+> **Syntax & Example**: `2.6.2-flex-align-item-column.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>2.6.2-flex-align-item-column</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .main-container {
+        border: 4px solid #826a98;
+        
+        display: flex; /* block level flex container */
+        flex-direction: column;
+        height: 600px;
+        
+        /* align-items: stretch; */  /* default value for algn-iitems is stretch */
+        /* align-items: flex-start; */
+        /* align-items: flex-end; */
+        /* align-items: center; */
+        align-items: baseline;
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        background-color:#DDA0DD;
+        padding-bottom: 2rem;
+        font-family:cursive;
+      }
+
+      .item-2 {
+        background-color:#BF94E4;
+        padding-bottom: 3rem;
+        padding-right: 5rem;
+      }
+
+      .item-3 {
+        background-color:#734F96;
+        font-size: 3rem;
+      }
+
+      .item-4 {
+        background-color:#FBAED2;
+        font-size: 8px;
+      }
+
+      .item-5 {
+        background-color:#EE82EE;
+      }
+      
+      .item-6 {
+        background-color:#ADE4CA;
+      }
+
+      .item-7 {
+        background-color:#A6D5AE;
+      }
+
+      .item-8 {
+        background-color:#8FBC8E;
+      }
+
+      .item-9 {
+        background-color: #64A466;
+      }
+      
+      .item-10 {
+        background-color:#2E8B56;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.2.1-flex-align-item-column-stretch.png" alt="align-items: stretch;" title="align-items: stretch;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: stretch; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.2.2-flex-align-item-column-flex-start.png" alt="align-items: flex-start;" title="align-items: flex-start;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: flex-start; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.2.3-flex-align-item-column-flex-end.png" alt="align-items: flex-end;" title="align-items: flex-end;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: flex-end; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.2.4-flex-align-item-column-center.png" alt="align-items: center;" title="align-items: center;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: center; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.2.5-flex-align-item-column-baseline.png" alt="align-items: baseline;" title="align-items: baseline;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: baseline; </figcaption>
   </figure>
 </p>
