@@ -64,6 +64,7 @@ Topics included/covered
     - 2.4. [Flex Flow](#24-flex-flow)
     - 2.5. [Justify Content](#25-justify-content)
     - 2.6. [Align Items](#26-align-items)
+    - 2.7. [Align Content](#27-align-content)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -832,7 +833,7 @@ By default, all items in Flex Container try to fit themselves in a container in 
 - syntax:
 ```css
 .container {
-  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right
+  justify-content: flex-start | flex-end | center | space-between | space-around | space-evenly | start | end | left | right;
 }
 ```
 
@@ -987,7 +988,7 @@ By default, all items in Flex Container try to fit themselves in a container in 
 - syntax:
 ```css
 .container {
-  align-items: stretch | flex-start | flex-end | center | baseline 
+  align-items: stretch | flex-start | flex-end | center | baseline;
 }
 ```
 
@@ -1197,7 +1198,7 @@ The `align-items` property will align the items on the cross axis:
       .item-1 {
         background-color:#DDA0DD;
         padding-bottom: 2rem;
-        font-family:cursive;
+        font-family: cursive;
       }
 
       .item-2 {
@@ -1296,5 +1297,161 @@ The `align-items` property will align the items on the cross axis:
   <figure>
     &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.6.2.5-flex-align-item-column-baseline.png" alt="align-items: baseline;" title="align-items: baseline;" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - align-items: baseline; </figcaption>
+  </figure>
+</p>
+
+2.7. Align Content
+---------------------
+
+- `align-content` property aligns the lines of content along the cross axis (vertically) of the container if multiple lines/rows available
+- Multiple lines/rows (wrapping) is must, so `flex-wrap: wrap` is required to force content to the next line
+- **`Note`**: this property has no effect when there is only one line of flex items
+- syntax:
+```css
+.container {
+  align-content: stretch | flex-start | flex-end | center | space-between | space-around;
+}
+```
+
+`align-content` property aligns lines of content along the cross axis and distributes any extra spacing in the parent container:
+- **`align-content: stretch;`**
+  - Default alignment/placement for flex-items, covers/occupy 100% height of container (lines streched to fill available space/gap)
+- **`align-content: flex-start;`**
+  - Pulls lines to the beginning of cross-axis or flex container, All flex items squeezed or align at start ie. from the top of the container 
+- **`align-content: flex-end;`**
+  - All flex items start from the bottom or aligned/pushed at the bottom (end of the container or cross-axis)
+- **`align-content: center;`**
+  - Align item vertically center/middle of the container
+- **`align-content: space-between;`**
+  - Equally, distribute the items (put extra space in-between two lines to align top and bottom)
+- **`align-content: space-around;`**
+  - Put space around as well as the top and bottom of lines (top-bottom edge space/gap is 50% of in-between/around space/gap)
+
+### 2.7.1. Row wise align-content
+
+> **Syntax & Example**: `2.7.1-flex-align-content-row.html`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+        
+  display: flex; /* block level flex container */
+  height: 600px;
+  flex-wrap: wrap;
+
+  /* align-content: stretch; */ /* default value for align-content is stretch */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-between; */
+  align-content: space-around;
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.1.1-flex-align-content-row-stretch.png" alt="align-content: stretch;" title="align-content: stretch;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: stretch; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.1.2-flex-align-content-row-flex-start.png" alt="align-content: flex-start;" title="align-content: flex-start;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: flex-start; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.1.3-flex-align-content-row-flex-end.png" alt="align-content: flex-end;" title="align-content: flex-end;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: flex-end; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.1.4-flex-align-content-row-center.png" alt="align-content: center;" title="align-content: center;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: center; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.1.5-flex-align-content-row-space-between.png" alt="align-content: space-between;" title="align-content: space-between;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: space-between; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.1.6-flex-align-content-row-space-around.png" alt="align-content: space-around;" title="align-content: space-around;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: space-around; </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+### 2.7.2. Columner/Column wise align-content
+
+> **Syntax & Example**: `2.7.2-flex-align-content-column.html`
+
+```css
+.main-container {
+  border: 4px solid #826a98;
+        
+  display: flex; /* block level flex container */
+  height: 300px;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  /* align-content: stretch; */ /* default value for align-content is stretch */
+  /* align-content: flex-start; */
+  /* align-content: flex-end; */
+  /* align-content: center; */
+  /* align-content: space-between; */
+  align-content: space-around;
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.2.1-flex-align-content-column-stretch.png" alt="align-content: stretch;" title="align-content: stretch;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: stretch; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.2.2-flex-align-content-column-flex-start.png" alt="align-content: flex-start;" title="align-content: flex-start;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: flex-start; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.2.3-flex-align-content-column-flex-end.png" alt="align-content: flex-end;" title="align-content: flex-end;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: flex-end; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.2.4-flex-align-content-column-center.png" alt="align-content: center;" title="align-content: center;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: center; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.2.5-flex-align-content-column-space-between.png" alt="align-content: space-between;" title="align-content: space-between;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: space-between; </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/2.7.2.6-flex-align-content-column-space-around.png" alt="align-content: space-around;" title="align-content: space-around;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-content: space-around; </figcaption>
   </figure>
 </p>
