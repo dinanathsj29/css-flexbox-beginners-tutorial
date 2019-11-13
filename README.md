@@ -1459,6 +1459,23 @@ The `align-items` property will align the items on the cross axis:
   </figure>
 </p>
 
+3 Flex Item Properties
+===================== 
+
+Let us look into the some of the important properties used with and applicable to Flex Item or Child Elements (usually known as `Items`, present inside Flex container):
+- **`order`**
+ - `order` property controls the order in which flex item appears in Flex Container
+- **`flex-grow`**
+ - `flex-grow` property defines and sets the ability for flex item to grow/spread if necessary by adding some spaces
+- **`flex-shrink`**
+ - `flex-shrink` property defines and sets the ability for a flex item to shrink/squeeze if necessary
+- **`flex-basis`**
+ - `flex-basis` property signifies the initial main size of a flex item
+- **`flex`**
+ - `flex` property short-hand property for combination of `flex-grow`, `flex-shrink` and `flex-basis`
+- **`align-self`**
+ - `align-self` property allows and sets the alignment of an individual flex item
+
 3.1. order
 ---------------------
 
