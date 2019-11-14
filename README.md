@@ -70,6 +70,7 @@ Topics included/covered
     - 3.1. [Order](#31-order)
     - 3.2. [Flex Grow](#32-flex-grow)
     - 3.3. [Flex Shrink](#33-flex-shrink)
+    - 3.4. [Flex Basis](#34-flex-basis)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -1889,7 +1890,7 @@ Let us look into the some of the important properties used with and applicable t
 
 <hr/>
 
-```css ???
+```css
 .item-2 {
   color: #ffffff;
   font-size: 1rem;
@@ -2017,3 +2018,8 @@ Let us look into the some of the important properties used with and applicable t
     <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-shrink: 2; flex-shrink: 4; relative/proportionate shrinking of multiple items </figcaption>
   </figure>
 </p>
+
+
+3.4. flex-basis
+---------------------
+
