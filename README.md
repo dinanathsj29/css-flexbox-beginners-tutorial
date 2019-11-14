@@ -1657,7 +1657,7 @@ Let us look into the some of the important properties used with and applicable t
  </figure>
 </p>
 
-3.2. flex-grow
+3.2. Flex Grow
 ---------------------
 
 - `flex-grow` property denotes and specifies how much space or amount of space flex item to take if necessary
@@ -1856,7 +1856,7 @@ Let us look into the some of the important properties used with and applicable t
   </figure>
 </p>
 
-3.3. flex-shrink
+3.3. Flex Shrink
 ---------------------
 
 - `flex-shrink` property denotes and specifies an ability of flex-item to shrink if necessary
@@ -1902,7 +1902,7 @@ Let us look into the some of the important properties used with and applicable t
 ```
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.3.1-flex-item-shrink-nothing-2.png" alt="flex-shrink: 0; flex item no shrink" title="flex-shrink: 0; flex item no shrink" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.3.1-flex-item-shrink-2-nothing.png" alt="flex-shrink: 0; flex item no shrink" title="flex-shrink: 0; flex item no shrink" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-shrink: 0; flex item no shrink </figcaption>
   </figure>
 </p>
@@ -2020,6 +2020,7 @@ Let us look into the some of the important properties used with and applicable t
 </p>
 
 
-3.4. flex-basis
+3.4. Flex Basis
 ---------------------
 
+- ?
