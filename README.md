@@ -67,7 +67,8 @@ Topics included/covered
     - 2.7. [Align Content](#27-align-content)
 
 3. [Flex Item Properties](#3-flex-item-properties)
-    - 3.1. [order](#31-order)
+    - 3.1. [Order](#31-order)
+    - 3.2. [Flex Grow](#32-flex-grow)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -997,7 +998,7 @@ By default, all items in Flex Container try to fit themselves in a container in 
 
 The `align-items` property will align the items on the cross axis:
 - **`align-item: stretch;`**
-  - Default alignment for flex-items, covers/occupy 100% height of container
+  - Default alignment for flex-items, covers/occupy 100% height of the container
 - **`align-item: flex-start;`**
   - All flex items squeezed/stacked or align at start ie. from the top of the container (items line up at the start of the flex container)
 - **`align-item: flex-end;`**
@@ -1318,7 +1319,7 @@ The `align-items` property will align the items on the cross axis:
 
 `align-content` property aligns lines of content along the cross axis and distributes any extra spacing in the parent container:
 - **`align-content: stretch;`**
-  - Default alignment/placement for flex-items, covers/occupy 100% height of container (lines streched to fill available space/gap)
+  - Default alignment/placement for flex-items, covers/occupy 100% height of the container (lines stretched to fill available space/gap)
 - **`align-content: flex-start;`**
   - Pulls lines to the beginning of cross-axis or flex container, All flex items squeezed or align at start ie. from the top of the container 
 - **`align-content: flex-end;`**
@@ -1476,13 +1477,13 @@ Let us look into the some of the important properties used with and applicable t
 - **`align-self`**
  - `align-self` property allows and sets the alignment of an individual flex item
 
-3.1. order
+3.1. Order
 ---------------------
 
 - `order` property specifies and denotes the order of the flex items/children of a flex container appear inside the flex container
 - `order` property controls the order in which flex item appears in Flex Container
 - `order` property accepts integer value and controls the order of items in the flex container 
-- The default order of all flex item is `0`, flex item aligns by items with lower order to higher order in left to right direction
+- The default order of all flex item is `0`, flex item aligns by items with lower order to higher order in left to the right direction
 - `order` with greater value aligns himself at the very end of flex container (Item with order 1 or more value will place at the end), so the order placement is lower to higher number from left to right direction
 - Items with same order number align as per appearance/order in HTML source code
 - syntax:
@@ -1498,7 +1499,7 @@ Let us look into the some of the important properties used with and applicable t
 
 .item-5 {
  background-color:#EE82EE;
- order: 2;
+ order: 2; /* higher order number will aligned to extreme right or at the end */
 }
 ```
 
@@ -1617,7 +1618,7 @@ Let us look into the some of the important properties used with and applicable t
 
 .item-5 {
  background-color:#EE82EE;
- order: 2;
+ order: 2; /* higher order number will aligned to extreme right or at the end */
 }
 ```
 
@@ -1638,12 +1639,12 @@ Let us look into the some of the important properties used with and applicable t
 
 .item-5 {
  background-color:#EE82EE;
- order: 2;
+ order: 2; /* higher order number will aligned to extreme right or at the end */
 }
 
 .item-9 {
  background-color: #64A466;
- order: 2;
+ order: 2; /* higher order number will aligned to extreme right or at the end */
 }
 ```
 
@@ -1652,4 +1653,203 @@ Let us look into the some of the important properties used with and applicable t
  &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.1.1-flex-item-order-3.png" alt="order: 2; same order number alignment" title="order: 2; same order number alignment" width="1000" border="2" />
  <figcaption>&nbsp;&nbsp;&nbsp; Image - order: 2; Items with same order number aligns as per apperance/order in html source code </figcaption>
  </figure>
+</p>
+
+3.2. flex-grow
+---------------------
+
+- `flex-grow` property denotes and specifies how much space or amount of space flex item to take if necessary
+- `flex-grow` dictates what amount of the available space inside the flex container the item should take
+- The `flex-grow` property specifies how much a flex item will grow relative to the rest of the flex items
+- By default, all the flex item have `flex-grow` value as `0`, so they don't occupy any extra-empty or remaining space available in the container
+- `flex-grow` size is always relative to the size of other flex items in flex container (size of the flex-grow item is calculated as per the size of other flex items) 
+- syntax:
+```css 
+.item {
+  flex-grow: <number>; /* default 0 */
+}
+```
+> **Syntax & Example**: `3.2-flex-item-grow.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3.2-flex-item-grow</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verana;
+      }
+
+      .main-container {
+        border: 4px solid #826a98;
+        display: flex; /* block level flex container */
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        background-color:#DDA0DD;
+      }
+
+      .item-2 {
+        background-color:#BF94E4;
+      }
+
+      .item-3 {
+        background-color:#734F96;
+      }
+
+      .item-4 {
+        background-color:#FBAED2;
+      }
+
+      .item-5 {
+        background-color:#EE82EE;
+      }
+      
+      .item-6 {
+        background-color:#ADE4CA;
+      }
+
+      .item-7 {
+        background-color:#A6D5AE;
+      }
+
+      .item-8 {
+        background-color:#8FBC8E;
+      }
+
+      .item-9 {
+        background-color: #64A466;
+      }
+      
+      .item-10 {
+        background-color:#2E8B56;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.2.1-flex-item-default-alignment-1.png" alt="flex item default alignment/placement" title="flex item default alignment/placement" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex item default alignment/placement </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+```css
+.item-2 {
+  background-color:#BF94E4;
+  flex-grow: 1;
+}
+```
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.2.1-flex-item-grow-2.png" alt="flex-grow: 1;" title="flex-grow: 1;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-grow: 1; </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+```css
+.item-2 {
+  background-color:#BF94E4;
+  flex-grow: 1;
+}
+
+.item-3 {
+  background-color:#734F96;
+  flex-grow: 1;
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.2.1-flex-item-grow-3.png" alt="flex-grow: 1; to multiple item" title="flex-grow: 1; to multiple item" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-grow: 1; to multiple item </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+```css
+.item-2 {
+  background-color:#BF94E4;
+  flex-grow: 1;
+}
+
+.item-3 {
+  background-color:#734F96;
+  flex-grow: 1;
+}
+
+.item-4 {
+  background-color:#FBAED2;
+  flex-grow: 2; /* proportionate double gap, 2 times gap */
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.2.1-flex-item-grow-4.png" alt="flex-grow: 2; proportionate double gap" title="flex-grow: 2; proportionate double gap" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-grow: 2; proportionate double gap </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+```css
+.item {
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.75rem;
+  text-align: center;
+  flex-grow: 1;
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.2.1-flex-item-grow-5.png" alt="flex-grow: 1;" title="flex-grow: 1;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex-grow: 1; equal grow size for all items </figcaption>
+  </figure>
 </p>
