@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.2.2-flex-demo-responsive-navbar</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .navbar-container {
+        background-color: #64A466;
+        border: 4px solid #826a98;
+        font-size: 1rem;
+      }
+
+      .navbar-content {
+        display: flex; /* block level flex container */
+        /* justify-content: flex-end; */
+      }
+
+      .navbar-content, .nav-item {
+        list-style: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-item {
+        color: #000000;
+        cursor: pointer;
+        padding: 0.5rem 1.5rem;
+        text-align: center;
+
+        flex: auto;
+      }
+
+      .nav-item:hover {
+        color: #ffffff;
+        background-color: #826a98;
+      }
+
+      @media all and (max-width: 599px) {
+
+        .navbar-content {
+          flex-direction: column;
+        }
+
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar-container">
+
+      <ul class="navbar-content">
+        <li class="nav-item nav-item-1">Home</li>
+        <li class="nav-item nav-item-2">About Us</li>
+        <li class="nav-item nav-item-3">Services</li>
+        <li class="nav-item nav-item-4">Products</li>
+        <li class="nav-item nav-item-5">Contact Us</div>
+      </ul>
+      
+    </nav>
+    
+  </body>
+  
+</html>
