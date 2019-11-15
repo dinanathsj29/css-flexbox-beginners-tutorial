@@ -2141,3 +2141,260 @@ Let us look into the some of the important properties used with and applicable t
 </p>
 
 
+3.5. Flex
+---------------------
+
+- `flex` property is short-hand for combination of properties like `flex-grow`, `flex-shrink` and `flex-basis`
+- By default value for `flex-grow` is `0`, `flex-shrink` is `1` and `flex-basis` is `auto`
+- W3C encourages/recommends to use the `flex` shorthand values intelligently rather than the set the individual/separate component properties
+- syntax:
+```css
+.item {
+  /* flex: <flex-grow> && <flex-shrink> || <flex-basis> */
+  
+  /* flex-grow: 2;
+  flex-shrink: 5;
+  flex-basis: 300px; */
+
+  flex: 2 5 300px;
+}
+```
+
+> **Syntax & Example**: `3.5-flex-basis-1.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3.5-flex</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .main-container {
+        border: 4px solid #826a98;
+        display: flex; /* block level flex container */
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+        /* width: 200px; */ /* Instead of assigning width to flex-item, its advisable to always use and apply `flex-basis` property to set initial width */
+      }
+
+      .item-1 {
+        background-color:#DDA0DD;
+      }
+
+      .item-2 {
+        background-color:#BF94E4;
+      }
+
+      .item-3 {
+        background-color:#734F96;
+      }
+
+      .item-4 {
+        background-color:#FBAED2;
+      }
+
+      .item-5 {
+        background-color:#EE82EE;
+
+        /* flex-grow: 2;
+        flex-shrink: 5; 
+        flex-basis: 300px; */
+
+        flex: 2 5 300px;
+      }
+      
+      /* .item-6 {
+        background-color:#ADE4CA;
+      }
+
+      .item-7 {
+        background-color:#A6D5AE;
+      }
+
+      .item-8 {
+        background-color:#8FBC8E;
+      }
+
+      .item-9 {
+        background-color: #64A466;
+      }
+      
+      .item-10 {
+        background-color:#2E8B56;
+      } */
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+      <div class="item item-1">item-1</div>
+      <div class="item item-2">item-2</div>
+      <div class="item item-3">item-3 width as per Content</div>
+      <div class="item item-4">item-4</div>
+      <div class="item item-5">item-5 flex</div>
+      <!-- <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div> -->
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.5.1-flex-1.png" alt="flex - short-hand for `flex-grow`, `flex-shrink` and `flex-basis`"" title="flex - short-hand for `flex-grow`, `flex-shrink` and `flex-basis`" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - flex - short-hand for `flex-grow`, `flex-shrink` and `flex-basis`"  </figcaption>
+  </figure>
+</p>
+
+
+3.6. Align Self
+---------------------
+
+- The `align-self` property is used to control the alignment of individual flex-items
+- The `align-self` simply overrides the default alignment set by the container's `align-items` property
+ - The default value for `align-self` is `auto`, it simply means inherit the alignment from container's `align-items` property which is by default `stretch`
+- syntax:
+```css
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+```
+
+> **Syntax & Example**: `3.6-flex-align-self.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>3.6-flex-align-self</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .main-container {
+        border: 4px solid #826a98;
+        display: flex; /* block level flex container */
+        
+        height: 400px;
+        align-items: flex-end;
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        background-color:#DDA0DD;
+        align-self: flex-start;
+      }
+
+      .item-2 {
+        background-color:#BF94E4;
+        /* align-self: flex-end; */
+      }
+
+      .item-3 {
+        background-color:#734F96;
+        align-self: center;
+      }
+
+      .item-4 {
+        background-color:#FBAED2;
+        align-self: stretch;
+      }
+
+      .item-5 {
+        background-color:#EE82EE;
+
+        font-size: 30px;
+        align-self: baseline;
+      }
+      
+      .item-6 {
+        background-color:#ADE4CA;
+      }
+
+      .item-7 {
+        background-color:#A6D5AE;
+      }
+
+      .item-8 {
+        background-color:#8FBC8E;
+      }
+
+      .item-9 {
+        background-color: #64A466;
+      }
+      
+      .item-10 {
+        background-color:#2E8B56;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="main-container">
+      <div class="item item-1">item-1 <br/> flex-start</div>
+      <div class="item item-2">item-2 <br/> flex-end</div>
+      <div class="item item-3">item-3 <br/> center</div>
+      <div class="item item-4">item-4 <br/> stretch</div>
+      <div class="item item-5">item-5</div>
+      <div class="item item-6">item-6</div>
+      <div class="item item-7">item-7</div>
+      <div class="item item-8">item-8</div>
+      <div class="item item-9">item-9</div>
+      <div class="item item-10">item-10</div>
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.6.1-flex-align-self-1.png" alt="align-self: auto | flex-start | flex-end | center | baseline | stretch;" title="align-self: auto | flex-start | flex-end | center | baseline | stretch;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - align-self: auto | flex-start | flex-end | center | baseline | stretch; </figcaption>
+  </figure>
+</p>
