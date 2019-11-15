@@ -71,6 +71,12 @@ Topics included/covered
     - 3.2. [Flex Grow](#32-flex-grow)
     - 3.3. [Flex Shrink](#33-flex-shrink)
     - 3.4. [Flex Basis](#34-flex-basis)
+    - 3.5. [Flex](#35-flex)
+    - 3.6. [Align Self](#36-align-self)
+
+4. [Flex Practical Demo Examples](#4-flex-practical-demo-examples)
+  - 4.1. [Perfect Center](#41-perfect-center)
+  - 4.2. [Flex Navbar](#42-flex-navbar)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -2396,5 +2402,292 @@ Let us look into the some of the important properties used with and applicable t
   <figure>
     &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/3.6.1-flex-align-self-1.png" alt="align-self: auto | flex-start | flex-end | center | baseline | stretch;" title="align-self: auto | flex-start | flex-end | center | baseline | stretch;" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - align-self: auto | flex-start | flex-end | center | baseline | stretch; </figcaption>
+  </figure>
+</p>
+
+4 Flex Practical Demo Examples
+=====================  
+
+4.1. Perfect Center
+---------------------
+
+> **Syntax & Example**: `4.1-flex-demo-perfect-center.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.1-flex-demo-perfect-center.html</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .container {
+        background-color: #64A466;
+        border: 4px solid #826a98;
+        height: 500px;
+        width: 500px;
+
+        display: flex; /* block level flex container */
+        justify-content: center; /* horizontal center - align along the main axis */
+        align-items: center; /* vertical center - cross axis*/
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-align: center;
+      }
+
+      .item-1 {
+        height: 100px;
+        width: 100px;
+        background-color:#A6D5AE;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="item item-1">item-1</div>
+      
+    </div>
+    
+  </body>
+  
+</html>
+```
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.1-flex-demo-perfect-center.png" alt="Perfect center with justify-content: center; and align-items: center;" title="Perfect center with justify-content: center; and align-items: center;" width="400" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Perfect center with justify-content: center; and align-items: center; </figcaption>
+  </figure>
+</p>
+
+4.2. Flex Navbar
+---------------------
+
+### 4.2.1. Simple Flex Navbar
+
+> **Syntax & Example**: `4.2.1-flex-demo-simple-navbar.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.2.1-flex-demo-simple-navbar</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .navbar-container {
+        background-color: #64A466;
+        border: 4px solid #826a98;
+        font-size: 1rem;
+      }
+
+      .navbar-content {
+        display: flex; /* block level flex container */
+        justify-content: flex-end;
+      }
+
+      .navbar-content, .nav-item {
+        list-style: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-item {
+        color: #000000;
+        cursor: pointer;
+        padding: 0.5rem 1.5rem;
+        text-align: center;
+      }
+
+      .nav-item:hover {
+        color: #ffffff;
+        background-color: #826a98;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar-container">
+
+      <ul class="navbar-content">
+        <li class="nav-item nav-item-1">Home</li>
+        <li class="nav-item nav-item-2">About Us</li>
+        <li class="nav-item nav-item-3">Services</li>
+        <li class="nav-item nav-item-4">Products</li>
+        <li class="nav-item nav-item-5">Contact Us</div>
+      </ul>
+      
+    </nav>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.1-flex-demo-simple-navbar.png" alt="Simple Flex Navbar" title="Simple Flex Navbar" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Simple Flex Navbar </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+### 4.2.2. Responsive Flex Navbar
+
+> **Syntax & Example**: `4.2.2-flex-demo-responsive-navbar.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.2.2-flex-demo-responsive-navbar</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .navbar-container {
+        background-color: #64A466;
+        border: 4px solid #826a98;
+        font-size: 1rem;
+      }
+
+      .navbar-content {
+        display: flex; /* block level flex container */
+        /* justify-content: flex-end; */
+      }
+
+      .navbar-content, .nav-item {
+        list-style: none;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav-item {
+        color: #000000;
+        cursor: pointer;
+        padding: 0.5rem 1.5rem;
+        text-align: center;
+
+        flex: auto;
+      }
+
+      .nav-item:hover {
+        color: #ffffff;
+        background-color: #826a98;
+      }
+
+      @media all and (max-width: 599px) {
+
+        .navbar-content {
+          flex-direction: column;
+        }
+
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar-container">
+
+      <ul class="navbar-content">
+        <li class="nav-item nav-item-1">Home</li>
+        <li class="nav-item nav-item-2">About Us</li>
+        <li class="nav-item nav-item-3">Services</li>
+        <li class="nav-item nav-item-4">Products</li>
+        <li class="nav-item nav-item-5">Contact Us</div>
+      </ul>
+      
+    </nav>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.2.1-flex-demo-responsive-navbar.png" alt="Responsive Flex Navbar" title="Responsive Flex Navbar" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Responsive Flex Navbar </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+```css
+.nav-item {
+  color: #000000;
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  text-align: center;
+
+  flex: auto;
+}
+@media all and (max-width: 599px) {
+
+  .navbar-content {
+    flex-direction: column;
+  }
+
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.2.2-flex-demo-responsive-navbar.png" alt="Responsive Flex Navbar" title="Responsive Flex Navbar" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Responsive Flex Navbar </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.2.3-flex-demo-responsive-navbar.png" alt="Responsive Flex Navbar" title="Responsive Flex Navbar" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Responsive Flex Navbar </figcaption>
   </figure>
 </p>
