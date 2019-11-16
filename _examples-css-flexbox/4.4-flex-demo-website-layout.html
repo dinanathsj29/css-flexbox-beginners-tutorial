@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.4-flex-demo-website-layout</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+        text-align: center;
+
+        height: 100vh;
+      }
+
+      .layout-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .flx-header {
+        padding: 2rem;
+        background-color:#A6D5AE;
+      }
+
+      .flx-main-container {
+        display: flex;
+        flex: 1;
+      }
+
+      .flx-nav, .flx-aside {
+        background-color:#DDA0DD;
+        padding: 1rem;
+        flex: 1;
+      }
+
+      .flx-article-section {
+        background-color: #64A466;
+        padding: 1rem;
+        flex: 4;
+      }
+
+      .flx-footer {
+        padding: 1rem;
+        background-color:#A6D5AE;
+        font-size: 0.5rem;
+        font-weight: bold;
+        letter-spacing: 1rem;
+      }
+
+      @media all and (max-width: 599px) {
+
+        .flx-main-container {
+          flex-direction: column;
+        }
+
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <main class="layout-container">
+
+      <header class="flx-header">FLEX HEADER</header>
+
+      <main class="flx-main-container">
+
+        <nav class="flx-nav">Side Navigation</nav>
+
+        <article class="flx-article-section">
+          Main Content Article 
+        </article>
+
+        <aside class="flx-aside">Side Ad Bar</aside>
+
+      </main>
+
+      <footer class="flx-footer">Flex Footer</footer>
+    
+    </main>
+
+  </body>
+  
+</html>
