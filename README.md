@@ -136,6 +136,8 @@ Let's learn some of the Important Terminology/concepts related to CSS flexbox to
 2. **`Flex Items`** (Child/sub-items)
 3. **`Flexbox axis`** (Main axis [horizontal] and Cross axis [vertical])
 
+To start with Flexbox just apply a `display` type of `flex` to the parent container
+
 > **Syntax & Example**: `1.4-flex-container-item.html basic markup`
 
 ```html
