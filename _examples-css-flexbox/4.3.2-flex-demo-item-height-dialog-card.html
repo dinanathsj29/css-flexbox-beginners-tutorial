@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.3.2-flex-demo-item-height-dialog-card</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .dialog-container {
+        background-color: #64A466;
+        border: 4px solid #826a98;
+
+        display: flex; /* block level flex container */
+      }
+
+      .dialog {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        
+        display: flex;
+        flex-direction: column;
+      }
+
+      .dialog-1 {
+        background-color:#A6D5AE;
+      }
+
+      .dialog-2 {
+        background-color:#DDA0DD;
+      }
+
+      .dialog-header {
+        font-size: 2rem;
+      }
+
+      .dialog-footer {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        background-color: #7d6f7d8a;
+        font-size: 0.5em;
+        padding: 1.5em;
+        text-align: right;
+      }
+
+      .dialog-body {
+        /* flex-grow: 1; */
+        flex: 1;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="dialog-container">
+
+      <div class="dialog dialog-1">
+
+        <header class="dialog-header">Dialog-1 Information</header>
+
+        <section class="dialog-body">
+          CSS Flexible Box Layout Module (Flexbox)
+        </section>
+
+        <footer class="dialog-footer">Dialog-1 &copy; Dinanath Corporation 2019 </footer>
+
+      </div>
+
+      <div class="dialog dialog-2">
+
+        <header class="dialog-header">Dialog-2 Flexbox Information</header>
+
+        <section class="dialog-body">
+          CSS Flexible Box Layout Module (Flexbox) is one of the most widely used and popular mechanisms which provides flexibility to create/build or design professional layouts/nested layouts. `CSS Flexible Box Layout Module` is also known and referred to as `CSS Flexbox`, is designed for one-dimensional layout model that makes it easy:
+          <ul>
+            <li>Design flexible and efficient layouts</li>
+          </ul>  
+          This is a comprehensive guide to CSS flexbox layout. This complete guide explains everything about the flexbox. Basic knowledge of HTML5 and CSS3. 
+        </section>
+
+        <footer class="dialog-footer">Dialog-2 &copy; Dinanath Corporation 2019 </footer>
+
+      </div>
+
+    </div>
+    
+  </body>
+  
+</html>
