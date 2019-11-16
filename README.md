@@ -77,6 +77,7 @@ Topics included/covered
 4. [Flex Practical Demo Examples](#4-flex-practical-demo-examples)
   - 4.1. [Perfect Center](#41-perfect-center)
   - 4.2. [Flex Navbar](#42-flex-navbar)
+  - 4.3. [Item height adjustment](#43-item-height-adjustment)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -2691,3 +2692,202 @@ Let us look into the some of the important properties used with and applicable t
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Responsive Flex Navbar </figcaption>
   </figure>
 </p>
+
+4.3. Item height adjustment
+---------------------
+
+> **Syntax & Example**: `4.3.1-flex-demo-item-height.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.3.1-flex-demo-item-height</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .container {
+        background-color: #64A466;
+        border: 4px solid #826a98;
+
+        display: flex; /* block level flex container */
+      }
+
+      .item {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+      }
+
+      .item-1 {
+        background-color:#A6D5AE;
+        
+        /* old mechanism */
+        /* float: left;
+        width: 20%; */
+      }
+
+      .item-2 {
+        background-color:#DDA0DD;
+
+        /* old mechanism */
+        /* float: right;
+        width: 80%; */
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="item item-1">Item-1 Detail Information</div>
+      <div class="item item-2">Item-2 CSS Flexible Box Layout Module (Flexbox) is one of the most widely used and popular mechanisms which provides flexibility to create/build or design professional layouts/nested layouts. `CSS Flexible Box Layout Module` is also known and referred to as `CSS Flexbox`, is designed for one-dimensional layout model that makes it easy:
+      <ul>
+        <li>Design flexible and efficient layouts</li>
+      </ul>  
+      This is a comprehensive guide to CSS flexbox layout. This complete guide explains everything about the flexbox. Basic knowledge of HTML5 and CSS3. </div>
+      
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.3.1-flex-demo-item-height.png" alt="Flex Item height adjustment" title="Flex Item height adjustment" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Item height adjustment </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+> **Syntax & Example**: `4.3.2-flex-demo-item-height-dialog-card.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.3.2-flex-demo-item-height-dialog-card</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+      }
+
+      .dialog-container {
+        background-color: #64A466;
+        border: 4px solid #826a98;
+
+        display: flex; /* block level flex container */
+      }
+
+      .dialog {
+        color: #ffffff;
+        font-size: 1rem;
+        padding: 0.75rem;
+        
+        display: flex;
+        flex-direction: column;
+      }
+
+      .dialog-1 {
+        background-color:#A6D5AE;
+      }
+
+      .dialog-2 {
+        background-color:#DDA0DD;
+      }
+
+      .dialog-header {
+        font-size: 2rem;
+      }
+
+      .dialog-footer {
+        margin: 0;
+        padding: 0;
+        margin-top: 20px;
+        background-color: #7d6f7d8a;
+        font-size: 0.5em;
+        padding: 1.5em;
+        text-align: right;
+      }
+
+      .dialog-body {
+        /* flex-grow: 1; */
+        flex: 1;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="dialog-container">
+
+      <div class="dialog dialog-1">
+
+        <header class="dialog-header">Dialog-1 Information</header>
+
+        <section class="dialog-body">
+          CSS Flexible Box Layout Module (Flexbox)
+        </section>
+
+        <footer class="dialog-footer">Dialog-1 &copy; Dinanath Corporation 2019 </footer>
+
+      </div>
+
+      <div class="dialog dialog-2">
+
+        <header class="dialog-header">Dialog-2 Flexbox Information</header>
+
+        <section class="dialog-body">
+          CSS Flexible Box Layout Module (Flexbox) is one of the most widely used and popular mechanisms which provides flexibility to create/build or design professional layouts/nested layouts. `CSS Flexible Box Layout Module` is also known and referred to as `CSS Flexbox`, is designed for one-dimensional layout model that makes it easy:
+          <ul>
+            <li>Design flexible and efficient layouts</li>
+          </ul>  
+          This is a comprehensive guide to CSS flexbox layout. This complete guide explains everything about the flexbox. Basic knowledge of HTML5 and CSS3. 
+        </section>
+
+        <footer class="dialog-footer">Dialog-2 &copy; Dinanath Corporation 2019 </footer>
+
+      </div>
+
+    </div>
+    
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.3.2-flex-demo-item-height-dialog-card.png" alt="Flex Item height / Footer adjustment with Dialog box or Cards" title="Flex Item height / Footer adjustment with Dialog box or Cards" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Item height / Footer adjustment with Dialog box or Cards </figcaption>
+  </figure>
+</p>
+
