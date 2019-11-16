@@ -78,6 +78,7 @@ Topics included/covered
   - 4.1. [Perfect Center](#41-perfect-center)
   - 4.2. [Flex Navbar](#42-flex-navbar)
   - 4.3. [Item height adjustment](#43-item-height-adjustment)
+  - 4.4. [Flex Website Layout](#44-flex-website-layout)
 
 1 Introduction to CSS Flexbox
 =====================
@@ -2888,6 +2889,133 @@ Let us look into the some of the important properties used with and applicable t
   <figure>
     &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.3.2-flex-demo-item-height-dialog-card.png" alt="Flex Item height / Footer adjustment with Dialog box or Cards" title="Flex Item height / Footer adjustment with Dialog box or Cards" width="1000" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Item height / Footer adjustment with Dialog box or Cards </figcaption>
+  </figure>
+</p>
+
+4.4. Flex Website Layout
+---------------------
+
+> **Syntax & Example**: `4.4-flex-demo-website-layout.html`
+
+```html
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>4.4-flex-demo-website-layout</title>
+
+    <style type="text/css">
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: verdana;
+        text-align: center;
+
+        height: 100vh;
+      }
+
+      .layout-container {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      .flx-header {
+        padding: 2rem;
+        background-color:#A6D5AE;
+      }
+
+      .flx-main-container {
+        display: flex;
+        flex: 1;
+      }
+
+      .flx-nav, .flx-aside {
+        background-color:#DDA0DD;
+        padding: 1rem;
+        flex: 1;
+      }
+
+      .flx-article-section {
+        background-color: #64A466;
+        padding: 1rem;
+        flex: 4;
+      }
+
+      .flx-footer {
+        padding: 1rem;
+        background-color:#A6D5AE;
+        font-size: 0.5rem;
+        font-weight: bold;
+        letter-spacing: 1rem;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <main class="layout-container">
+
+      <header class="flx-header">FLEX HEADER</header>
+
+      <main class="flx-main-container">
+
+        <nav class="flx-nav">Side Navigation</nav>
+
+        <article class="flx-article-section">
+          Main Content Article 
+        </article>
+
+        <aside class="flx-aside">Side Ad Bar</aside>
+
+      </main>
+
+      <footer class="flx-footer">Flex Footer</footer>
+    
+    </main>
+
+  </body>
+  
+</html>
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.1-flex-demo-website-layout.png" alt="Flex Website Layout" title="Flex Website Layout" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Website Layout </figcaption>
+  </figure>
+</p>
+
+<hr/>
+
+```css
+@media all and (max-width: 599px) {
+
+  .flx-main-container {
+    flex-direction: column;
+  }
+
+}
+```
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.2-flex-demo-website-layout-responsive.png" alt="Flex Website Layout Responsive" title="Flex Website Layout Responsive" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Website Layout Responsive </figcaption>
+  </figure>
+</p>
+
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.3-flex-demo-website-layout-responsive.png" alt="Flex Website Layout Responsive" title="Flex Website Layout Responsive" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Website Layout Responsive </figcaption>
   </figure>
 </p>
 
