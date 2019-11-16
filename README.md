@@ -2682,14 +2682,14 @@ Let us look into the some of the important properties used with and applicable t
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.2.2-flex-demo-responsive-navbar.png" alt="Responsive Flex Navbar" title="Responsive Flex Navbar" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.2.2-flex-demo-responsive-navbar.png" alt="Responsive Flex Navbar" title="Responsive Flex Navbar" width="600" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Responsive Flex Navbar </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.2.3-flex-demo-responsive-navbar.png" alt="Responsive Flex Navbar" title="Responsive Flex Navbar" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.2.3-flex-demo-responsive-navbar.png" alt="Responsive Flex Navbar" title="Responsive Flex Navbar" width="600" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Responsive Flex Navbar </figcaption>
   </figure>
 </p>
@@ -2988,7 +2988,7 @@ Let us look into the some of the important properties used with and applicable t
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.1-flex-demo-website-layout.png" alt="Flex Website Layout" title="Flex Website Layout" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.1-flex-demo-website-layout.png" alt="Flex Website Layout" title="Flex Website Layout" width="800" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Website Layout </figcaption>
   </figure>
 </p>
@@ -3007,14 +3007,14 @@ Let us look into the some of the important properties used with and applicable t
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.2-flex-demo-website-layout-responsive.png" alt="Flex Website Layout Responsive" title="Flex Website Layout Responsive" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.2-flex-demo-website-layout-responsive.png" alt="Flex Website Layout Responsive" title="Flex Website Layout Responsive" width="400" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Website Layout Responsive </figcaption>
   </figure>
 </p>
 
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.3-flex-demo-website-layout-responsive.png" alt="Flex Website Layout Responsive" title="Flex Website Layout Responsive" width="1000" border="2" />
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.4.1.3-flex-demo-website-layout-responsive.png" alt="Flex Website Layout Responsive" title="Flex Website Layout Responsive" width="400" border="2" />
     <figcaption>&nbsp;&nbsp;&nbsp; Image - Flex Website Layout Responsive </figcaption>
   </figure>
 </p>
