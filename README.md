@@ -75,10 +75,10 @@ Topics included/covered
     - 3.6. [Align Self](#36-align-self)
 
 4. [Flex Practical Demo Examples](#4-flex-practical-demo-examples)
-  - 4.1. [Perfect Center](#41-perfect-center)
-  - 4.2. [Flex Navbar](#42-flex-navbar)
-  - 4.3. [Item height adjustment](#43-item-height-adjustment)
-  - 4.4. [Flex Website Layout](#44-flex-website-layout)
+    - 4.1. [Perfect Center](#41-perfect-center)
+    - 4.2. [Flex Navbar](#42-flex-navbar)
+    - 4.3. [Item height adjustment](#43-item-height-adjustment)
+    - 4.4. [Flex Website Layout](#44-flex-website-layout)
   
 5. [Flexbox Resources](#5-flexbox-resources)
 
