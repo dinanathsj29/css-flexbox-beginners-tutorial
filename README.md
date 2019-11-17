@@ -89,6 +89,8 @@ Topics included/covered
 1.1. What is CSS Flexbox
 ---------------------
 
+`CSS Flexible Box Layout Module` is a CSS3 layout mode that provides an easy, professional and advanced clean way to arrange child elements/items within a container.
+
 `CSS Flexible Box Layout Module` is also known and referred to as `CSS Flexbox`, is designed for one-dimensional layout model that makes it easy to:
 - Design flexible and efficient layouts
 - Distribute space among items
@@ -119,9 +121,10 @@ Before CSS Flexbox there were 4 layout modes/models:
 ---------------------
 
 - Flex/CSS Flexbox layout provides lots of flexibilities while creating complex layouts like:
+  - No CSS Float used
   - arrange items from left to right or top to bottom and vice versa
   - adjust the spacing between objects
-  - alignments of items
+  - Position and alignments of items
   - order and placements of various elements 
   - improve the items alignment, directions and order in the container even when they are with dynamic or even unknown size
   - equal height columns
@@ -129,6 +132,7 @@ Before CSS Flexbox there were 4 layout modes/models:
   - Flexbox is a new CSS display type designed to craft CSS layouts in a much easier way
   - Control the position, size, and spacing of child elements relative to parent container and other child elements
   - CSS flexbox works great responsively (RWD - Responsive Web Design)
+  - Responsive and Mobile friednly
   - Bootstrap 4 is built-on with Flex layout Model
 
 1.4. Important Terminology
