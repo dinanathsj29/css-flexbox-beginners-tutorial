@@ -2561,10 +2561,27 @@ Let us look into the some of the important properties used with and applicable t
 </html>
 ```
 
+```justify-content: flex-end;```
 <p>
   <figure>
-    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.1-flex-demo-simple-navbar.png" alt="Simple Flex Navbar" title="Simple Flex Navbar" width="1000" border="2" />
-    <figcaption>&nbsp;&nbsp;&nbsp; Image - Simple Flex Navbar </figcaption>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.1-flex-demo-simple-navbar.png" alt="Simple Flex Navbar justify-content: flex-end;" title="Simple Flex Navbar justify-content: flex-end;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Simple Flex Navbar justify-content: flex-end; </figcaption>
+  </figure>
+</p>
+
+```justify-content: flex-start;```
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.1.2-flex-demo-simple-navbar.png" alt="Simple Flex Navbar justify-content: flex-start;" title="Simple Flex Navbar justify-content: flex-start;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Simple Flex Navbar justify-content: flex-start; </figcaption>
+  </figure>
+</p>
+
+```justify-content: center;```
+<p>
+  <figure>
+    &nbsp;&nbsp;&nbsp; <img src="_images-css-flexbox/4.2.1.3-flex-demo-simple-navbar.png" alt="Simple Flex Navbar justify-content: center;" title="Simple Flex Navbar justify-content: center;" width="1000" border="2" />
+    <figcaption>&nbsp;&nbsp;&nbsp; Image - Simple Flex Navbar justify-content: center; </figcaption>
   </figure>
 </p>
 
