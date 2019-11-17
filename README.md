@@ -79,6 +79,9 @@ Topics included/covered
   - 4.2. [Flex Navbar](#42-flex-navbar)
   - 4.3. [Item height adjustment](#43-item-height-adjustment)
   - 4.4. [Flex Website Layout](#44-flex-website-layout)
+  
+5. [Flexbox Resources](#5-flexbox-resources)
+
 
 1 Introduction to CSS Flexbox
 =====================
@@ -3038,3 +3041,10 @@ Let us look into the some of the important properties used with and applicable t
   </figure>
 </p>
 
+
+5 Flexbox Resources
+=====================  
+
+> **Reference:** - https://www.w3schools.com/css/css3_flexbox.asp
+
+> **Reference**: - https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout
